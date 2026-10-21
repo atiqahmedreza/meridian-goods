@@ -1,13 +1,13 @@
 # Meridian Goods
 
-A polished e-commerce storefront built for the **Remontada Next.js Assessment**. It uses the Next.js App Router, Firebase Authentication, and a responsive Tailwind UI with public catalog pages and protected product management.
+Meridian Goods is a polished e-commerce storefront built with the Next.js App Router, Firebase Authentication, and a responsive Tailwind UI—with public catalog pages and protected product management.
 
 ## Submission
 
 | Deliverable | Link |
 |-------------|------|
-| **GitHub repository** | [github.com/atiqahmedreza/remontada-shop](https://github.com/atiqahmedreza/remontada-shop) |
-| **Live demo (Vercel)** | [remontada-shop.vercel.app](https://remontada-shop.vercel.app) |
+| **GitHub repository** | [github.com/atiqahmedreza/meridian-goods](https://github.com/atiqahmedreza/meridian-goods) |
+| **Live demo (Vercel)** | [meridian-goods.vercel.app](https://meridian-goods.vercel.app) |
 
 This README includes a project description, feature list, setup steps, and route summary below.
 
@@ -25,7 +25,8 @@ This README includes a project description, feature list, setup steps, and route
 1. **Clone and install**
 
    ```bash
-   cd remontada-shop
+   git clone https://github.com/atiqahmedreza/meridian-goods.git
+   cd meridian-goods
    npm install
    ```
 
@@ -50,7 +51,7 @@ This README includes a project description, feature list, setup steps, and route
 3. Add the same `NEXT_PUBLIC_FIREBASE_*` environment variables (required for login/register on the live site)
 4. Deploy
 
-Production for this project: [remontada-shop.vercel.app](https://remontada-shop.vercel.app)
+Production: [meridian-goods.vercel.app](https://meridian-goods.vercel.app)
 
 ## Route summary
 
