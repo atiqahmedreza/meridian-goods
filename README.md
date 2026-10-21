@@ -2,6 +2,15 @@
 
 A polished e-commerce storefront built for the **Remontada Next.js Assessment**. It uses the Next.js App Router, Firebase Authentication, and a responsive Tailwind UI with public catalog pages and protected product management.
 
+## Submission
+
+| Deliverable | Link |
+|-------------|------|
+| **GitHub repository** | [github.com/atiqahmedreza/remontada-shop](https://github.com/atiqahmedreza/remontada-shop) |
+| **Live demo (Vercel)** | [remontada-shop.vercel.app](https://remontada-shop.vercel.app) |
+
+This README includes a project description, feature list, setup steps, and route summary below.
+
 ## Features
 
 - Landing page with navbar, hero, four themed sections, and footer
@@ -38,8 +47,10 @@ A polished e-commerce storefront built for the **Remontada Next.js Assessment**.
 
 1. Push the repo to GitHub
 2. Import the project in [Vercel](https://vercel.com)
-3. Add the same `NEXT_PUBLIC_FIREBASE_*` environment variables
+3. Add the same `NEXT_PUBLIC_FIREBASE_*` environment variables (required for login/register on the live site)
 4. Deploy
+
+Production for this project: [remontada-shop.vercel.app](https://remontada-shop.vercel.app)
 
 ## Route summary
 
