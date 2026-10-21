@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e3348;
+  --foreground-muted: #3d5368;
+  --accent: #1a6b6b;
+  --accent-bright: #248f8f;
+  --accent-soft: rgba(26, 107, 107, 0.14);
+  --border: rgba(30, 51, 72, 0.12);
+  --border-strong: rgba(30, 51, 72, 0.22);
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --foreground-muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-bright: #5eead4;
+  --accent-soft: rgba(45, 212, 191, 0.15);
+  --border: rgba(148, 163, 184, 0.2);
+  --border-strong: rgba(148, 163, 184, 0.35);
+  --surface: #1e293b;
+  --surface-muted: #334155;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-app: var(--background);
+  --color-ink: var(--foreground);
+  --color-ink-muted: var(--foreground-muted);
+  --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background);
+}
+
+::selection {
+  background: rgba(26, 107, 107, 0.35);
+  color: var(--foreground);
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-canvas {
+    background-color: var(--background);
+  }
+  .bg-surface {
+    background-color: var(--surface);
+  }
+  .bg-surface-muted {
+    background-color: var(--surface-muted);
+  }
+  .border-app {
+    border-color: var(--border);
+  }
+  .border-app-strong {
+    border-color: var(--border-strong);
+  }
+  .shadow-soft {
+    box-shadow:
+      0 1px 2px rgba(30, 51, 72, 0.06),
+      0 10px 28px rgba(30, 51, 72, 0.08);
+  }
+  .dark .shadow-soft {
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.2),
+      0 10px 28px rgba(0, 0, 0, 0.35);
+  }
+  .shadow-elevated {
+    box-shadow:
+      0 2px 6px rgba(30, 51, 72, 0.08),
+      0 16px 48px rgba(30, 51, 72, 0.1);
+  }
+  .dark .shadow-elevated {
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.25),
+      0 16px 48px rgba(0, 0, 0, 0.45);
+  }
+  .glass-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+}
