@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predev": "node scripts/check-firebase-env.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "firebase:check": "node scripts/check-firebase-env.mjs",
+    "firebase:sync-vercel": "node scripts/sync-firebase-env-to-vercel.mjs"
   },
   "dependencies": {
     "firebase": "^13.0.0",

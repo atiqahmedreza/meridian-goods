@@ -40,11 +40,12 @@ export function ProductCard({ product }: { product: Product }) {
               <span className="text-sm font-normal text-ink-muted">.00</span>
             </p>
           </div>
-          <span
-            className={`rounded-full px-4 py-2 text-xs opacity-0 transition group-hover:opacity-100 group-focus-within:opacity-100 ${accentFilledClassName}`}
+          <Link
+            href={`/items/${product.id}`}
+            className={`relative z-20 shrink-0 rounded-full px-4 py-2 text-xs font-semibold pointer-events-auto ${accentFilledClassName}`}
           >
-            View details
-          </span>
+            View Details
+          </Link>
         </div>
       </div>
     </article>

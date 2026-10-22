@@ -30,11 +30,30 @@ This README includes a project description, feature list, setup steps, and route
    npm install
    ```
 
-2. **Firebase**
+2. **Firebase** (required for login, register, and protected routes)
 
-   - Create a project at [Firebase Console](https://console.firebase.google.com/)
-   - Enable **Authentication** → Email/Password and Google (optional)
-   - Copy your web app config into `.env.local` (see `.env.example`)
+   1. [Create a Firebase project](https://console.firebase.google.com/) (e.g. `meridian-goods`).
+   2. **Build** → **Authentication** → **Get started** → enable **Email/Password**.
+   3. (Recommended) Enable **Google** under Sign-in providers.
+   4. **Project settings** (gear) → **Your apps** → add a **Web** app → copy the `firebaseConfig` values.
+   5. In this repo:
+
+      ```bash
+      cp .env.example .env.local   # Windows: copy .env.example .env.local
+      ```
+
+      Paste each value into `.env.local` (names match the Firebase config fields).
+
+   6. **Authorized domains** (Authentication → Settings → Authorized domains): ensure `localhost` and your production host (e.g. `meridian-goods.vercel.app`) are listed.
+
+   7. Verify locally:
+
+      ```bash
+      npm run firebase:check
+      npm run dev
+      ```
+
+   Test at `/register` and `/login`. After sign-in you should reach `/` with the account menu and access to `/items/add` and `/items/manage`.
 
 3. **Run locally**
 
@@ -48,8 +67,16 @@ This README includes a project description, feature list, setup steps, and route
 
 1. Push the repo to GitHub
 2. Import the project in [Vercel](https://vercel.com)
-3. Add the same `NEXT_PUBLIC_FIREBASE_*` environment variables (required for login/register on the live site)
-4. Deploy
+3. Add the same `NEXT_PUBLIC_FIREBASE_*` variables in Vercel (**Settings → Environment Variables**), or from a filled `.env.local` run:
+
+   ```bash
+   npm run firebase:sync-vercel
+   npx vercel deploy --prod
+   ```
+
+   (`NEXT_PUBLIC_*` vars are stored as Vercel **Config** — public client values, not secrets.)
+
+4. Redeploy after adding env vars so auth works on the live site.
 
 Production: [meridian-goods.vercel.app](https://meridian-goods.vercel.app)
 

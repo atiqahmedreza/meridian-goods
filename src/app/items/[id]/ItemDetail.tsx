@@ -38,7 +38,7 @@ export function ItemDetail({ id }: { id: string }) {
       <Container className="py-16 text-center">
         <h1 className="text-2xl font-semibold text-ink">Product not found</h1>
         <ButtonLink href="/items" variant="accent" className="mt-6">
-          Back to shop
+          Back to items
         </ButtonLink>
       </Container>
     );
@@ -50,6 +50,12 @@ export function ItemDetail({ id }: { id: string }) {
     <>
       <div className="border-b border-app">
         <Container className="py-4">
+          <Link
+            href="/items"
+            className="mb-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-bright"
+          >
+            ← Back to items
+          </Link>
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
@@ -153,7 +159,7 @@ export function ItemDetail({ id }: { id: string }) {
         {related.length > 0 && (
           <section className="mt-16 border-t border-app pt-12">
             <div className="flex items-end justify-between gap-4">
-              <h2 className="text-2xl font-semibold text-ink">You may also like</h2>
+              <h2 className="text-2xl font-semibold text-ink">Related items</h2>
               <Link
                 href="/items"
                 className="text-sm font-semibold text-accent hover:text-accent-bright"

@@ -71,12 +71,12 @@ export function AddProductForm() {
     <ProtectedRoute>
       <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
         <Link href="/items" className="text-sm font-medium text-accent hover:text-accent-bright">
-          ← Back to shop
+          ← Back to items
         </Link>
-        <h1 className="mt-4 text-3xl font-bold text-ink">Add product</h1>
+        <h1 className="mt-4 text-3xl font-bold text-ink">Add Product</h1>
         <p className="mt-2 text-sm text-ink-muted">
-          New listings are saved in your browser and appear in the shop alongside our curated
-          catalog. Perfect for demos and assessment submissions.
+          New listings are saved in your browser and appear on the items page alongside our
+          curated catalog.
         </p>
 
         <form

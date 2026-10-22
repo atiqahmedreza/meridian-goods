@@ -169,7 +169,7 @@ export function Navbar() {
                       className="block px-4 py-2.5 text-sm text-ink-muted hover:text-ink"
                       onClick={() => setDropdownOpen(false)}
                     >
-                      Add product
+                      Add Product
                     </Link>
                     <Link
                       href="/items/manage"
@@ -177,7 +177,7 @@ export function Navbar() {
                       className="block px-4 py-2.5 text-sm text-ink-muted hover:text-ink"
                       onClick={() => setDropdownOpen(false)}
                     >
-                      Manage inventory
+                      Manage Products
                     </Link>
                     <button
                       type="button"

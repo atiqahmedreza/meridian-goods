@@ -40,7 +40,7 @@ export function ManageProducts() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-ink">Manage products</h1>
+            <h1 className="text-3xl font-bold text-ink">Manage Products</h1>
             <p className="mt-2 text-ink-muted">
               View the full catalog. Delete only applies to products you added.
             </p>
@@ -49,7 +49,7 @@ export function ManageProducts() {
             href="/items/add"
             className={`rounded-full px-4 py-2 text-sm ${accentFilledClassName}`}
           >
-            Add product
+            Add Product
           </Link>
         </div>
 
