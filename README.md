@@ -7,7 +7,7 @@ Meridian Goods is a polished e-commerce storefront built with the Next.js App Ro
 | Deliverable | Link |
 |-------------|------|
 | **GitHub repository** | [github.com/atiqahmedreza/meridian-goods](https://github.com/atiqahmedreza/meridian-goods) |
-| **Live demo (Vercel)** | [meridian-goods.vercel.app](https://meridian-goods.vercel.app) |
+| **Live demo (Vercel)** | [remontada-shop.vercel.app](https://remontada-shop.vercel.app) |
 
 This README includes a project description, feature list, setup steps, and route summary below.
 
@@ -44,7 +44,7 @@ This README includes a project description, feature list, setup steps, and route
 
       Paste each value into `.env.local` (names match the Firebase config fields).
 
-   6. **Authorized domains** (Authentication → Settings → Authorized domains): ensure `localhost` and your production host (e.g. `meridian-goods.vercel.app`) are listed.
+   6. **Authorized domains** (Authentication → Settings → Authorized domains): ensure `localhost` and your production host (e.g. `remontada-shop.vercel.app`) are listed.
 
    7. Verify locally:
 
@@ -78,7 +78,7 @@ This README includes a project description, feature list, setup steps, and route
 
 4. Redeploy after adding env vars so auth works on the live site.
 
-Production: [meridian-goods.vercel.app](https://meridian-goods.vercel.app)
+Production: [remontada-shop.vercel.app](https://remontada-shop.vercel.app)
 
 ## Route summary
 
